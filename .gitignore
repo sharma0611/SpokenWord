@@ -1,4 +1,5 @@
 scripts/config.cfg
+scripts/token
 env/
 files/sphinx.log
 __pycache__/
