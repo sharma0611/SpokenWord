@@ -74,11 +74,13 @@ wave_obj_start = sa.WaveObject.from_wave_file("sounds/your_turn.wav")
 def listen_and_run_command():
     print("keyword detected")
     play_start = wave_obj_start.play()
-    with m as source: audio = r.listen(source, phrase_time_limit=4)
+    with m as source: audio = r.listen(source, phrase_time_limit=3)
     value = r.recognize_google(audio)
     words = value.split(" ")
     key_word_spoken = words[0]
-    arguments_given = words[1:].join(" ")
+    key_word_spoken = key_word_spoken.lower()
+    arguments_given = " ".join(words[1:])
+    arguments_given = arguments_given.lower()
     cmd = commands[key_word_spoken]
     cmd = cmd + " " + arguments_given
     print("your command is: ")

@@ -1,9 +1,8 @@
 #!/usr/bin/env osascript
 
-do shell script "python ./spotify_auth.py"
 
 on run argv
-
+  do shell script "python ./scripts/spotify_auth.py"
   set msg to "Use the following commands:\n"
   set msg to msg & "  start, play [uri]                 - Start playback / play uri\n"
   set msg to msg & "  start, play track  [song name]    - Search and play track\n"
@@ -24,7 +23,7 @@ on run argv
   set msg to msg & "  decreasevolume N                  - Decrement Volume by N (0...100)\n"
 
   set waitFlag to false 
-  set my_token to read "./token"
+  set my_token to read "./scripts/token"
 
   if count of argv is equal to 0 then
     return msg

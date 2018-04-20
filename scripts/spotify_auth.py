@@ -4,7 +4,7 @@ import configparser
 
 def get_token():
     config = configparser.ConfigParser()
-    config.read("./config.cfg")
+    config.read("./scripts/config.cfg")
     section = config._sections["spotify"]
     client_id = section['client_id']
     client_secret = section['client_secret']
@@ -13,7 +13,7 @@ def get_token():
 
     token = client_credentials_manager.get_access_token()
 
-    with open("./token", 'w') as f:
+    with open("./scripts/token", 'w') as f:
         f.write(token)
 
     return token
