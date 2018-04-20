@@ -89,3 +89,4 @@ def listen_and_run_command():
 if __name__ == "__main__":
     # Start key phrase recognition and call the "demo_function" when triggered
     start_keyphrase_recognition(listen_and_run_command, key_word)
+

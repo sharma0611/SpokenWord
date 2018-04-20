@@ -1,2 +1,4 @@
 scripts/config.cfg
 env/
+files/sphinx.log
+__pycache__/

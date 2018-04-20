@@ -7,6 +7,7 @@ def get_token():
     config.read("./config.cfg")
     section = config._sections["spotify"]
     client_id = section['client_id']
+    print(section)
     client_secret = section['client_secret']
     api_URL = "https://accounts.spotify.com/api/token"
     client_credentials_manager = SpotifyClientCredentials(client_id=client_id, client_secret=client_secret)
