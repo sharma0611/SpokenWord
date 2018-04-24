@@ -4,7 +4,7 @@
 # store commands and keywords in dictionary as such:
 # commands = {"keyword": "./scripts/spotify_ctrl", ... ]
 
-key_word = "spot" #keyword to initializing listener, similar to "hey google"
+key_word = "bottle" #keyword to initializing listener, similar to "hey google"
 
 commands = {"play": "./scripts/spotify_ctrl play track",
         "start": "./scripts/spotify_ctrl play"}

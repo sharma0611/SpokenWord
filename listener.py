@@ -81,12 +81,15 @@ def listen_and_run_command():
     key_word_spoken = key_word_spoken.lower()
     arguments_given = " ".join(words[1:])
     arguments_given = arguments_given.lower()
-    cmd = commands[key_word_spoken]
-    cmd = cmd + " " + arguments_given
-    print("your command is: ")
-    print(cmd)
-    subprocess.Popen(cmd.split())
-    print("finished command")
+    try:
+        cmd = commands[key_word_spoken]
+        cmd = cmd + " " + arguments_given
+        print("your command is: ")
+        print(cmd)
+        subprocess.Popen(cmd.split())
+        print("finished command")
+    except KeyError:
+        print("command not found " + str(key_word_spoken))
 
 if __name__ == "__main__":
     # Start key phrase recognition and call the "demo_function" when triggered
